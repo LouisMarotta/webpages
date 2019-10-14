@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
 
-        <title>Genèric Pizzeria</title>
-        <meta charset="utf-8">
+<head>
 
-        <link rel="stylesheet" type="text/css" href="./css/theme.css">
+    <title>Genèric Pizzeria</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" type="text/css" href="./css/theme.css">
 
 
-        <script>
-        function immagine(ele){
+    <script>
+        function immagine(ele) {
 
             //Immagini
             //console.log(ele)
@@ -32,70 +33,77 @@
             newelement.classList.add("active")
 
             var extraimage = document.getElementsByClassName("extraimage")[0]
-            if (index == 2){
+            if (index == 2) {
                 extraimage.classList.add("active")
-            }else{
+            } else {
                 extraimage.classList.remove("active")
             }
 
-            
+
         }
 
-        </script>
-    </head>
+    </script>
+</head>
 
-    <body>
-        <!-- Pulsantiera -->
-        <header>
-            <h1 class="immagine"><a href="index.html">Genèric Pizzeria</a></h1>
-                <nav>
-                    <ul class="nav_links">
-                        <li> <button indice="0" img="./img/pizza2.png" onclick="immagine(this)">Menù</button></li>
-                        <li> <button indice="1" img="./img/chisiamo.png" onclick="immagine(this)">Chi siamo</button></li>
-                        <li> <button id="button" indice="2" img="./img/oven.png" onclick="immagine(this)">Galleria</button></li>
-                    </ul>
-                </nav>
-                <a href="./pages/contatti.html">Contattaci</a>
-        </header>
+<body>
+    <!-- Pulsantiera -->
+    <header>
+        <h1 class="immagine"><a href="index.html">Genèric Pizzeria</a></h1>
+        <nav>
+            <ul class="nav_links">
+                <li> <button indice="0" img="./img/pizza2.png" onclick="immagine(this)">Menù</button></li>
+                <li> <button indice="1" img="./img/chisiamo.png" onclick="immagine(this)">Chi siamo</button></li>
+                <li> <button indice="2" img="./img/oven.png" onclick="immagine(this)">Galleria</button></li>
+            </ul>
+        </nav>
+        <a href="./pages/contatti.html">Contattaci</a>
+    </header>
 
 
-        <div>
-            <div class="imgcontainer active">
-                <img class="main" src="./img/pizza2.png" id="main">
-            </div>
-
-            <div class="extraimage">
-                    <img id="extraimage" src="./img/table.png">
-                    <img id="extraimage" src="./img/pizzatime.png">
-            </div>
+    <div>
+        <div class="imgcontainer active">
+            <img class="main" src="./img/pizza2.png" id="main">
         </div>
 
+        <div class="extraimage">
+            <img id="extraimage" src="./img/table.png">
+            <img id="extraimage" src="./img/pizzatime.png">
+        </div>
+    </div>
 
 
 
 
-            <div class="box active">
 
-                <p>Genèric Pizzeria porta la tradizione della <a href="./pages/menu.html">vera pizza napoletana</a> anche in Emilia Romagna fin dal 19xx. Con i nostri forni a legna siamo orgogliosi di presentare una pizza a regola d'arte e i nostri mastri pizzaioli vi faranno provare la tradizione rivisitata anche in chiave moderna.</p> 
-                <p>Il nostro locale accogliente è adatto sia ai veterani della pizza, sia a quelli che la provano per la prima volta. Saremo felici di farvi provare un esperienza autentica e artigianale.</p>
-                
-                <p></p>
-            </div>
+    <div class="box active">
 
-            <div class="box">
-                <p>
-                    Fondata nel 19xx la Genèric Pizzeria ha quasi un secolo di attività grazie agli sforzi della famiglia Genèric che continuano a tenere alto il nome della buona pizza napoletana. Le varie generazioni sono testimoni di una lunga tradizione di pizzaioli e sono gli unici depositari delle tecniche d’impasto che gli storici proprietari della pizzeria si tramandano da generazioni.
-                </p>
-                <p><a href="./pages/chisiamo.html">Visualizza di più</a></p>
-            </div>
+        <p>Genèric Pizzeria porta la tradizione della vera pizza napoletana anche in
+            Emilia Romagna fin dal 19xx. Con i nostri forni a legna siamo orgogliosi di presentare una pizza a regola
+            d'arte e i nostri mastri pizzaioli vi faranno provare la tradizione rivisitata anche in chiave moderna.</p>
+        <p>Il nostro locale accogliente è adatto sia ai veterani della pizza, sia a quelli che la provano per la prima
+            volta. Saremo felici di farvi provare un esperienza autentica e artigianale.</p>
 
-            <div class="box">
-                <p>
+        <p><a href="./pages/menu.html">Visualizza di più</a></p>
+    </div>
 
-                </p>
-            </div>
+    <div class="box">
+        <p>
+            Fondata nel 19xx la Genèric Pizzeria ha quasi un secolo di attività grazie agli sforzi della famiglia
+            Genèric che continuano a tenere alto il nome della buona pizza napoletana. Le varie generazioni sono
+            testimoni di una lunga tradizione di pizzaioli e sono gli unici depositari delle tecniche d’impasto che gli
+            storici proprietari della pizzeria si tramandano da generazioni.
+        </p>
+        <p><a href="./pages/chisiamo.html">Visualizza di più</a></p>
+    </div>
 
-        
+    <div class="box">
+        <p>
 
-    </body>
+        </p>
+    </div>
+
+
+
+</body>
+
 </html>
