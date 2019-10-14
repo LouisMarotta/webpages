@@ -11,14 +11,37 @@
 
         <script>
         function immagine(ele){
-            console.log(ele)
+
+            //Immagini
+            //console.log(ele)
             var srcImg = ele.getAttribute("img");
-            console.log(srcImg)
+            //console.log(srcImg)
 
             var immagine = document.getElementById("main");
-            console.log(immagine);
+            //console.log(immagine);
             immagine.src = srcImg;
+
+            //Testo
+            activetext = document.getElementsByClassName("active")[0];
+            //console.log(activetext)
+            activetext.classList.remove("active");
+
+            var index = ele.getAttribute("indice")
+            //console.log(index)
+            var newelement = document.getElementsByClassName("box")[index]
+            newelement.classList.add("active")
+
+            var extraimage = document.getElementsByClassName("extraimage")[0]
+            if (index == 2){
+                extraimage.classList.add("active")
+            }else{
+                extraimage.classList.remove("active")
+            }
+            //
+            //console.log(extraimage)
+            
         }
+
         </script>
     </head>
 
@@ -28,49 +51,48 @@
             <h1 class="immagine">Genèric Pizzeria</h1>
                 <nav>
                     <ul class="nav_links">
-                        <li> <button img="./img/pizza2.png" onclick="immagine(this)"> Menù</button></li>
-                        <li> <button img="./img/chisiamo.png" onclick="immagine(this)">Chi siamo</button></li>
-                        <li> <button img="./img/placeholder.jpg" onclick="immagine(this)">Galleria</button></li>
+                        <li> <button indice="0" img="./img/pizza2.png" onclick="immagine(this)"> Menù</button></li>
+                        <li> <button indice="1" img="./img/chisiamo.png" onclick="immagine(this)">Chi siamo</button></li>
+                        <li> <button id="button" indice="2" img="./img/placeholder.jpg" onclick="immagine(this)">Galleria</button></li>
                     </ul>
                 </nav>
                 <a href="#">Contattaci</a>
         </header>
 
 
-        
-            <div class="imgcontainer">
-                <img class="main" src="./img/pizza2.png" id="main">
-                <img class="main" src="./img/pizza2.png" id="main">
+        <div>
+            <div class="imgcontainer active">
                 <img class="main" src="./img/pizza2.png" id="main">
             </div>
 
+            <div class="extraimage">
+                    <img id="extraimage" src="./img/pizza2.png">
+                    <img id="extraimage" src="./img/pizza2.png">
+            </div>
+        </div>
 
 
 
 
-            <div class="box">
 
-                <p id="desc">
+            <div class="box active">
+
+                <p>
                 Test afuojbasuog[oafusdaosdughfouasd]afu ojbasuog[oafusdaosdughfouasd]afuojbasuog[oafusdaosdughfouasd ]afuojbasuog[oafusdaosdughfouasd]afuojbasuog[oafusdaosdughfouasd]
+                <a href="./"></a>
                 </p>
             </div>
 
             <div class="box">
-                <p id="desc">
-        
+                <p>
+                Testo2
+                <a href="./"></a>
                 </p>
             </div>
 
             <div class="box">
-                <p id="desc">
-
-                </p>
-            </div>
-
-            <div class="box">
-                <p id="desc">
-
-
+                <p>
+                    
                 </p>
             </div>
 
