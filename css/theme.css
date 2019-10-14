@@ -110,7 +110,20 @@ img {
     
     background-color: cornsilk;
 }
-
+.text{
+    background-color: #5e4840;
+    text-align: center;
+    padding: 0px 10px;
+}
+p{
+    font-size: 1.5em;
+}
+.box a{
+    color:#A08155;
+}
 .active {
     display: block;
+}
+.hidden {
+    display: none;
 }
