@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+        <title>Nome sito</title>
+        <meta charset="utf-8">
+
+        <link rel="stylesheet" type="text/css" href="./css/theme.css">
+
+
+        <script>
+        function immagine(ele){
+            console.log(ele)
+            var srcImg = ele.getAttribute("img");
+            console.log(srcImg)
+
+            var immagine = document.getElementById("main");
+            console.log(immagine);
+            immagine.src = srcImg;
+        }
+        </script>
+    </head>
+
+    <body>
+        <!-- Pulsantiera -->
+        <header>
+            <h1 class="immagine">Genèric Pizzeria</h1>
+                <nav>
+                    <ul class="nav_links">
+                        <li> <button img="./img/pizza2.png" onclick="immagine(this)"> Menù</button></li>
+                        <li> <button img="test2" onclick="immagine(this)">Chi siamo</button></li>
+                        <li> <button img="./img/placeholder.jpg" onclick="immagine(this)">Galleria</button></li>
+                    </ul>
+                </nav>
+                <a href="#">Contattaci</a>
+        </header>
+
+
+        
+            <div class="imgcontainer">
+                <img class="main" src="./img/pizza2.png" id="main">
+            </div>
+
+
+
+
+
+            <div class="box">
+
+                <p id="desc">
+                Test afuojbasuog[oafusdaosdughfouasd]afu ojbasuog[oafusdaosdughfouasd]afuojbasuog[oafusdaosdughfouasd ]afuojbasuog[oafusdaosdughfouasd]afuojbasuog[oafusdaosdughfouasd]
+                </p>
+            </div>
+
+            <div class="box">
+                <p id="desc">
+        
+                </p>
+            </div>
+
+            <div class="box">
+                <p id="desc">
+
+                </p>
+            </div>
+
+            <div class="box">
+                <p id="desc">
+
+
+                </p>
+            </div>
+
+        
+
+    </body>
+</html>
