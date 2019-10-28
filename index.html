@@ -1,109 +1,20 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Indice pagine</title>
 
-    <title>Genèric Pizzeria</title>
-    <meta charset="utf-8">
-
-    <link rel="stylesheet" type="text/css" href="./css/theme.css">
-
-
-    <script>
-        function immagine(ele) {
-
-            //Immagini
-            //console.log(ele)
-            var srcImg = ele.getAttribute("img");
-            //console.log(srcImg)
-
-            var immagine = document.getElementById("main");
-            //console.log(immagine);
-            immagine.src = srcImg;
-
-            //Testo
-            activetext = document.getElementsByClassName("active")[0];
-            //console.log(activetext)
-            activetext.classList.remove("active");
-
-            var index = ele.getAttribute("indice")
-            //console.log(index)
-            var newelement = document.getElementsByClassName("box")[index]
-            newelement.classList.add("active")
-
-            var extraimage = document.getElementsByClassName("extraimage")[0]
-            if (index == 2) {
-                extraimage.classList.add("active")
-            } else {
-                extraimage.classList.remove("active")
-            }
-
-
-        }
-
-    </script>
 </head>
 
 <body>
-    <!-- Pulsantiera -->
-    <header>
-        <h1 class="immagine"><a href="index.html">Genèric Pizzeria</a></h1>
-        <nav>
-            <ul class="nav_links">
-                <li> <button indice="0" img="./img/pizza2.png" onclick="immagine(this)">Menù</button></li>
-                <li> <button indice="1" img="./img/chisiamo.png" onclick="immagine(this)">Chi siamo</button></li>
-                <li> <button indice="2" img="./img/oven.png" onclick="immagine(this)">Galleria</button></li>
-            </ul>
-        </nav>
-        <a href="./pages/contatti.html">Contattaci</a>
-    </header>
+    <h1>Indice pagine</h1>
 
+    <hr>
 
-    <div>
-        <div class="imgcontainer active">
-            <img class="main" src="./img/pizza2.png" id="main">
-        </div>
-
-        <div class="extraimage">
-            <img id="extraimage" src="./img/table.png">
-            <img id="extraimage" src="./img/pizzatime.png">
-        </div>
-    </div>
-
-
-
-
-
-    <div class="box active">
-
-        <p>Genèric Pizzeria porta la tradizione della vera pizza napoletana anche in
-            Emilia Romagna fin dal 19xx. Con i nostri forni a legna siamo orgogliosi di presentare una pizza a regola
-            d'arte e i nostri mastri pizzaioli vi faranno provare la tradizione rivisitata anche in chiave moderna.</p>
-        <p>Il nostro locale accogliente è adatto sia ai veterani della pizza, sia a quelli che la provano per la prima
-            volta. Saremo felici di farvi provare un esperienza autentica e artigianale.</p>
-
-        <p><a href="./pages/menu.html">Visualizza di più</a></p>
-    </div>
-
-    <div class="box">
-        <p>
-            Fondata nel 19xx la Genèric Pizzeria ha quasi un secolo di attività grazie agli sforzi della famiglia
-            Genèric che continuano a tenere alto il nome della buona pizza napoletana. Le varie generazioni sono
-            testimoni di una lunga tradizione di pizzaioli e sono gli unici depositari delle tecniche d’impasto che gli
-            storici proprietari della pizzeria si tramandano da generazioni.
-        </p>
-        <p><a href="./pages/chisiamo.html">Visualizza di più</a></p>
-    </div>
-
-    <div class="box">
-        <p>
-
-        </p>
-    </div>
-
-
-
+    <h3>
+    <p><a href>Torte</a> 29/10/2019</p>
+    <p><a href>Vegapower</a> 8/10/2019</p>
+    </h3>
 </body>
-
 </html>

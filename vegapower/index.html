@@ -1,0 +1,109 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="./css/theme.css">
+</head>
+
+<body>
+    <div class="header">
+        <!-- logo https://www.flaticon.com/authors/eucalyp -->
+        <img class="logo" src="./img/harvest.svg"></img>
+        <label id="title">VegaPower<label>
+    </div>
+
+    <div class="wrapper">
+        <div class="left">
+            <ul>
+                <li><a onclick="categoria(this)" tipo="frutta">Frutta</a></li>
+                <li><a onclick="categoria(this)" tipo="verdura">Verdura</a></li>
+            </ul>
+        </div>
+        <div class="main frt">
+
+            <div class="frutta" onclick="selezionafr(this)" pesof="10">
+                <label class="nomefrutta">Mela</label>
+            </div>
+
+            <div class="frutta" onclick="selezionafr(this)" pesof="5">
+                <label class="nomefrutta">Pera</label>
+            </div>
+
+            <div class="frutta" onclick="selezionafr(this)" pesof="1">
+                <label class="nomefrutta">Ciliegia</label>
+            </div>
+            <label class="weight" id="weightfr">0kg</label>
+        </div>
+
+        <div class="main vrd hidden">
+
+            <div class="verdura" onclick="selezionave(this)" pesov="4">
+                <label class="nomefrutta">Carota</label>
+            </div>
+
+            <div class="verdura" onclick="selezionave(this)" pesov="5">
+                <label class="nomefrutta">Pomodoro</label>
+            </div>
+
+            <div class="verdura" onclick="selezionave(this)" pesov="8">
+                <label class="nomefrutta">Melanzana</label>
+            </div>
+            <label class="weight" id="weightvr">0kg</label>
+        </div>
+    </div>
+    <script>
+        function selezionafr(ele) {
+            ele.classList.toggle('selezionato');
+            //calcolo peso
+            var peso = 0;
+            var frutte = document.getElementsByClassName('selezionato');
+            for (var i = 0; i < frutte.length; i++) {
+                peso = peso + Number(frutte[i].getAttribute('pesof'));
+
+            }
+            //scrivere il peso
+            document.getElementById('weightfr').innerHTML = peso + "kg";
+        }
+
+        function selezionave(ele) {
+            ele.classList.toggle('selezionato');
+            
+            //calcolo peso
+            var peso = 0;
+            var verdure = document.getElementsByClassName('selezionato');
+            console.log(verdure)
+            for (var i = 0; i < verdure.length; i++) {
+                peso = peso + Number(verdure[i].getAttribute('pesov'));
+
+            }
+            //scrivere il peso
+            document.getElementById('weightvr').innerHTML = peso + "kg";
+            console.log(peso)
+        }
+
+        function categoria(ele) {
+            console.log(ele)
+            var selezione = ele.getAttribute("tipo");
+            var frutta = document.getElementsByClassName("frt")[0];
+            var verdura = document.getElementsByClassName("vrd")[0];
+
+            console.log(selezione)
+            console.log(frutta)
+            console.log(verdura)
+
+            if (selezione == "frutta") {
+                frutta.classList.remove("hidden")
+                verdura.classList.add("hidden")
+
+            } else {
+                verdura.classList.remove("hidden")
+                frutta.classList.add("hidden")
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>
