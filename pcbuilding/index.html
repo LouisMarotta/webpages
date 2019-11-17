@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+
+<head>
+    <title>PC Builder</title>
+    <meta charset="utf-8">
+
+    <!--Icona-->
+    <link rel="shortcut icon" href="./img/gaming.svg">
+
+    <link rel="stylesheet" type="text/css" href="./css/theme.css">
+    <link rel="stylesheet" type="text/css" href="./css/animate.css">
+    <script src="./js/select.js"></script>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div class="sitewrapper">
+        <div class="topnav">
+
+            <!-- Pulsantiera -->
+            <header>
+
+                <img src="./img/gaming.svg" class="logo"></img>
+                <a href="#test">
+                    <h1 class="immagine">PC Builder</h1>
+                </a>
+            </header>
+
+        </div>
+
+
+        <div class="mainwrapper">
+            <div class="parallax">
+                <h1>Costruisci il tuo PC</h1>
+                <p>oppure</p>
+                <div class="btn">
+                    <form method="get" action="./prebuilt.html">
+                        <button type="submit" class="animated">sfoglia precostruiti</button>
+                    </form>
+                </div>
+
+
+            </div>
+
+            <div class="content">
+                <div class="componenti cpu">
+                    <div class="descrizione">
+                        <h1>CPU:</h1>
+                        <p>This is a sample text.</p>
+                        <p>This is a sample text.</p>
+                        <p>This is a sample text.</p>
+                        <p>This is a sample text.</p>
+                    </div>
+
+                    <div class="pezzi">
+                        <div class="riga">
+                            <img onclick="seleziona(this)" formato="am4" nome="Ryzen™ 3 3200" costo="70"
+                                src="./img/cpu/ryzen.jpg"></img>
+                            <img onclick="seleziona(this)" formato="lga1151" nome="Intel™ Core i3-9100F" costo="80"
+                                src="./img/cpu/ryzen.jpg"></img>
+                        </div>
+                        <div class="riga">
+                            <img onclick="seleziona(this)" formato="am4" nome="Ryzen™ 5 3600" costo="200"
+                                src="./img/cpu/ryzen.jpg"></img>
+                            <img onclick="seleziona(this)" formato="lga1151" nome="Intel™ Core i7-6700k" costo="300"
+                                src="./img/cpu/ryzen.jpg"></img>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="componenti mobo">
+                    <div class="descrizione">
+                        <h1>Motherboard:</h1>
+                        <p>This is a sample text</p>
+
+                    </div>
+                    <div class="pezzi">
+                        <div class="riga">
+                            <img onclick="seleziona(this)" formato="" costo="" src="./img/mobo/asus.jpg"></img>
+                            <img onclick="seleziona(this)" formato="" costo="" src="./img/mobo/asus.jpg"></img>
+                        </div>
+                        <div class="riga">
+                            <img onclick="seleziona(this)" formato="" costo="" src="./img/mobo/asus.jpg"></img>
+                            <img onclick="seleziona(this)" formato="" costo="" src="./img/mobo/asus.jpg"></img>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="componenti ram">
+                    <div class="descrizione">
+                        <h1>RAM:</h1>
+                        <p>This is a sample text</p>
+
+                    </div>
+                    <div class="pezzi">
+                        <div class="riga">
+                            <img onclick="seleziona(this)" formato="" costo="" src="./img/mobo/asus.jpg"></img>
+                            <img onclick="seleziona(this)" formato="" costo="" src="./img/mobo/asus.jpg"></img>
+                        </div>
+                        <div class="riga"></div>
+                        <img onclick="seleziona(this)" formato="" costo="" src="./img/mobo/asus.jpg"></img>
+                        <img onclick="seleziona(this)" formato="" costo="" src="./img/mobo/asus.jpg"></img>
+                    </div>
+                </div>
+
+                <div class="componenti storage">
+                    <div class="descrizione">
+                        <h1>Storage:</h1>
+                        <p>This is a sample text</p>
+
+                    </div>
+                    <div class="pezzi">
+                        <div class="riga">
+                            <img onclick="seleziona(this)" costo="" src="./img/mobo/asus.jpg"></img>
+                            <img onclick="seleziona(this)" costo="" src="./img/mobo/asus.jpg"></img>
+                        </div>
+                        <div class="riga"></div>
+                        <img onclick="seleziona(this)" costo="" src="./img/mobo/asus.jpg"></img>
+                        <img onclick="seleziona(this)" costo="" src="./img/mobo/asus.jpg"></img>
+                    </div>
+                </div>
+
+                <div class="componenti gpu">
+                    <div class="descrizione">
+                        <h1>GPU:</h1>
+                        <p>This is a sample text</p>
+
+                    </div>
+                    <div class="pezzi">
+                        <div class="riga">
+                            <img onclick="seleziona(this)" costo="" src="./img/mobo/asus.jpg"></img>
+                            <img onclick="seleziona(this)" costo="" src="./img/mobo/asus.jpg"></img>
+                        </div>
+                        <div class="riga"></div>
+                        <img onclick="seleziona(this)" costo="" src="./img/mobo/asus.jpg"></img>
+                        <img onclick="seleziona(this)" costo="" src="./img/mobo/asus.jpg"></img>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="riepilogo">
+        <p>CPU: <h2 id="textcpu">non hai selezionato nessuna</h1>
+        </p>
+
+        <p id="mobo">Motherboard: <h2 id="textmobo">non hai selezionato nessuna</h2>
+        </p>
+
+        <p id="ram">RAM: <h2 id="textram">non hai selezionato nessuna</h2>
+        </p>
+
+        <p id="storage">Storage: <h2 id="textstorage">non hai selezionato nessuna</h2>
+        </p>
+
+        <p id="gpu">GPU: <h2 id="textgpu">non hai selezionato nessuna</h2>
+        </p>
+
+    </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="footer">
+
+    </div>
+    </div>
+
+
+
+
+    </div>
+</body>
