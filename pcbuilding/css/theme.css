@@ -143,6 +143,27 @@ ul, a, button{
     
 }
 
+.pc{
+    display: flex;
+    color: white;
+    padding: 30px;
+    background-color: #354C53;
+    justify-content: space-between;
+}
+
+ul li{
+    padding: 10px;
+}
+
+.specifiche h1{
+    padding: 10px;
+    
+}
+.specifiche h3{
+    padding: 20px;
+    
+}
+
 .descrizione{
     margin-left: 16px;
 }
