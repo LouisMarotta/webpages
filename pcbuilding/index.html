@@ -46,97 +46,125 @@
             </div>
 
             <div class="content">
-                <div class="componenti cpu">
+                <div class="componenti">
                     <div class="descrizione">
                         <h1>CPU:</h1>
-                        <p>This is a sample text.</p>
-                        <p>This is a sample text.</p>
-                        <p>This is a sample text.</p>
-                        <p>This is a sample text.</p>
+                        <p>La CPU sta per Central Processing Unit, e le principali </p>
+                        <p>caratteristiche da considerare quando se ne sceglie</p>
+                        <p>una sono il numero dei core e frequenza del clock</p>
+                        
                     </div>
 
                     <div class="pezzi">
                         <div class="riga">
-                            <img onclick="seleziona(this)" formato="am4" nome="Ryzen™ 3 3200" costo="70"
+                            <img onclick="selezionac(this)" class="cpu" formatoc="am4" nomec="Ryzen™ 3 3200G" costo="70"
                                 src="./img/cpu/ryzen.jpg"></img>
-                            <img onclick="seleziona(this)" formato="lga1151" nome="Intel™ Core i3-9100F" costo="80"
-                                src="./img/cpu/ryzen.jpg"></img>
+                            <img onclick="selezionac(this)" class="cpu" formatoc="lga1151" nomec="Intel™ Core i3-9100F"
+                                costo="80" src="./img/cpu/i3.jpg"></img>
                         </div>
                         <div class="riga">
-                            <img onclick="seleziona(this)" formato="am4" nome="Ryzen™ 5 3600" costo="200"
-                                src="./img/cpu/ryzen.jpg"></img>
-                            <img onclick="seleziona(this)" formato="lga1151" nome="Intel™ Core i7-6700k" costo="300"
-                                src="./img/cpu/ryzen.jpg"></img>
+                            <img onclick="selezionac(this)" class="cpu" formatoc="am4" nomec="Ryzen™ 5 3600" costo="200"
+                                src="./img/cpu/ryzen5.jpg"></img>
+                            <img onclick="selezionac(this)" class="cpu" formatoc="lga1151" nomec="Intel™ Core i7-6700k"
+                                costo="300" src="./img/cpu/i7.jfif"></img>
                         </div>
                     </div>
                 </div>
 
-                <div class="componenti mobo">
+                <div class="componenti">
                     <div class="descrizione">
                         <h1>Motherboard:</h1>
-                        <p>This is a sample text</p>
+                        <p>La motherboard è il componente che funge da base,</p>
+                        <p>determina quanti componenti puoi installare sul pc.</p>
+                        <p>È il secondo componente da scegliere dopo il processore</p>
 
                     </div>
                     <div class="pezzi">
                         <div class="riga">
-                            <img onclick="seleziona(this)" formato="" costo="" src="./img/mobo/asus.jpg"></img>
-                            <img onclick="seleziona(this)" formato="" costo="" src="./img/mobo/asus.jpg"></img>
+                            <img onclick="selezionam(this)" class="mobo" formatom="am4" costo="100"
+                                nomem="Asus ROG STRIX B450-F" src="./img/mobo/asusmobo.jpg"></img>
+                            <img onclick="selezionam(this)" class="mobo" formatom="lga1151" costo="80"
+                                nomem="ASRock B250 Pro4" src="./img/mobo/asrockb250.jfif"></img>
                         </div>
                         <div class="riga">
-                            <img onclick="seleziona(this)" formato="" costo="" src="./img/mobo/asus.jpg"></img>
-                            <img onclick="seleziona(this)" formato="" costo="" src="./img/mobo/asus.jpg"></img>
+                            <img onclick="selezionam(this)" class="mobo" formatom="am4" costo="70"
+                                nomem="Gigabyte B450M DS3H" src="./img/mobo/gigabyteb450.jfif"></img>
+                            <img onclick="selezionam(this)" class="mobo" formatom="lga1151" costo="60"
+                                nomem="MSI H110M PRO-D" src="./img/mobo/msih110m.jfif"></img>
                         </div>
                     </div>
                 </div>
 
-                <div class="componenti ram">
+                <div class="componenti">
                     <div class="descrizione">
                         <h1>RAM:</h1>
-                        <p>This is a sample text</p>
+                        <p>La ram è un tipo di memoria molto veloce, che serve a memorizzare</p>
+                        <p>temporaneamente le informazioni che servono al pc.</p>
 
                     </div>
                     <div class="pezzi">
                         <div class="riga">
-                            <img onclick="seleziona(this)" formato="" costo="" src="./img/mobo/asus.jpg"></img>
-                            <img onclick="seleziona(this)" formato="" costo="" src="./img/mobo/asus.jpg"></img>
+                            <img onclick="selezionar(this)" class="ram" formato="ddr4" costo="85"
+                                nomer="G.Skill Trident Z RGB 16GB" src="./img/ram/gskilltridentz.jpg"></img>
+                            <img onclick="selezionar(this)" class="ram" formato="ddr4" costo="75"
+                                nomer="Corsair Vengeance LPX 16GB" src="./img/ram/vengeanceddr4.jpg"></img>
                         </div>
-                        <div class="riga"></div>
-                        <img onclick="seleziona(this)" formato="" costo="" src="./img/mobo/asus.jpg"></img>
-                        <img onclick="seleziona(this)" formato="" costo="" src="./img/mobo/asus.jpg"></img>
+                        <div class="riga">
+                            <img onclick="selezionar(this)" class="ram" formato="ddr4" costo="60"
+                                nomer="Team T-FORCE VULCAN Z 16GB" src="./img/ram/tforce16.jfif"></img>
+                            <img onclick="selezionar(this)" class="ram" formato="ddr4" costo="35"
+                                nomer="Patriot Viper 4 Blackout 8GB" src="./img/ram/viper8.jfif"></img>
+                        </div>
                     </div>
                 </div>
 
                 <div class="componenti storage">
                     <div class="descrizione">
                         <h1>Storage:</h1>
-                        <p>This is a sample text</p>
+                        <p>Un dispositivo di archiviazione è qualsiasi hardware informatico
+                        <p>utilizzato per memorizzare, trasferire ed estrarre file di dati</p>
+                        <p>e oggetti.</p>
+                        <p>Esistono 2 tipi di memoria non volatile: Disco rigido(molto capiente ma lento),
+                        <p>e SSD(molto veloce ma costosa)</p> 
 
                     </div>
                     <div class="pezzi">
                         <div class="riga">
-                            <img onclick="seleziona(this)" costo="" src="./img/mobo/asus.jpg"></img>
-                            <img onclick="seleziona(this)" costo="" src="./img/mobo/asus.jpg"></img>
+                            <img onclick="selezionas(this)" class="sto" costo="60" nomes="Samsung 860 Evo 500GB SSD"
+                                src="./img/storage/samsung860.jpg"></img>
+                            <img onclick="selezionas(this)" class="sto" costo="44" nomes="Western Digital Blue 1TB HDD"
+                                src="./img/storage/wdblue.jpg"></img>
                         </div>
-                        <div class="riga"></div>
-                        <img onclick="seleziona(this)" costo="" src="./img/mobo/asus.jpg"></img>
-                        <img onclick="seleziona(this)" costo="" src="./img/mobo/asus.jpg"></img>
+                        <div class="riga">
+                            <img onclick="selezionas(this)" class="sto" costo="90" nomes="Samsung 970 Evo 500GB M.2 SSD"
+                                src="./img/storage/samsung970.jpg"></img>
+                            <img onclick="selezionas(this)" class="sto" costo="65" nomes="Seagate Barracuda 2TB HDD"
+                                src="./img/storage/seagate.jpg"></img>
+                        </div>
                     </div>
                 </div>
 
                 <div class="componenti gpu">
                     <div class="descrizione">
                         <h1>GPU:</h1>
-                        <p>This is a sample text</p>
+                        <p>La GPU sta per Graphical Processing Unit, ed è una unità di processo di</p>
+                        <p>ausilio della cpu. Prima di sceglierlo devi considerare che tipo di programmi</p>
+                        <p>vuoi utilizzare</p>
 
                     </div>
                     <div class="pezzi">
                         <div class="riga">
-                            <img onclick="seleziona(this)" costo="" src="./img/mobo/asus.jpg"></img>
-                            <img onclick="seleziona(this)" costo="" src="./img/mobo/asus.jpg"></img>
+                            <img onclick="selezionag(this)" class="gpu" costo="350" nomeg="XFX Radeon RX 5700 8GB"
+                                src="./img/gpu/rx5700.jpg"></img>
+                            <img onclick="selezionag(this)" class="gpu" costo="160" nomeg="MSI Radeon RX 580 8GB"
+                                src="./img/gpu/rx580.jpg"></img>
                         </div>
-                        <div class="riga"></div>
-                        <img onclick="seleziona(this)" costo="" src="./img/mobo/asus.jpg"></img>
-                        <img onclick="seleziona(this)" costo="" src="./img/mobo/asus.jpg"></img>
+                        <div class="riga">
+                            <img onclick="selezionag(this)" class="gpu" costo="150" nomeg="MSI GeForce GTX 1050Ti 4GB"
+                                src="./img/gpu/gtx1050ti.jpg"></img>
+                            <img onclick="selezionag(this)" class="gpu" costo="275" nomeg="MSI GeForce GTX 1660Ti 6GB"
+                                src="./img/gpu/gtx1660ti.jpg"></img>
+                        </div>
                     </div>
                 </div>
 
@@ -144,38 +172,69 @@
         </div>
     </div>
 
-    <div class="riepilogo">
-        <p>CPU: <h2 id="textcpu">non hai selezionato nessuna</h1>
-        </p>
+    <div class="wrapper">
+        <div class="riepilogo" style="padding-bottom: 24px;">
 
-        <p id="mobo">Motherboard: <h2 id="textmobo">non hai selezionato nessuna</h2>
-        </p>
+            <div id="incomp" class="hidden">
+                <h2>Il processore è incompatibile con la scheda madre</h2>
+            </div>
 
-        <p id="ram">RAM: <h2 id="textram">non hai selezionato nessuna</h2>
-        </p>
 
-        <p id="storage">Storage: <h2 id="textstorage">non hai selezionato nessuna</h2>
-        </p>
+            <p class="lista">
+                <div class="titolo">CPU:</div>
 
-        <p id="gpu">GPU: <h2 id="textgpu">non hai selezionato nessuna</h2>
-        </p>
+                <div class="line">
+                    <div class="scelta" id="textcpu">Scegli la cpu</div><b class="prezzo">0$</b>
+                </div>
+            </p>
+
+
+            <p class="lista">
+                <div class="titolo">Motherboard:</div>
+
+                <div class="line">
+                    <div class="scelta" id="textmobo">Scegli la motherboard</div><b class="prezzo">0$</b>
+                </div>
+            </p>
+
+
+            <p class="lista">
+                <div class="titolo">RAM:</div>
+
+                <div class="line">
+                    <div class="scelta" id="textram">Scegli la ram</div><b class="prezzo">0$</b>
+                </div>
+            </p>
+
+            <p class="lista">
+                <div class="titolo">Storage:</div>
+
+                <div class="line">
+                    <div class="scelta" id="textstorage">Scegli un hard disk/ssd</div><b class="prezzo">0$</b>
+                </div>
+            </p>
+
+
+            <p class="lista">
+                <div class="titolo">GPU:</div>
+
+                <div class="line">
+                    <div class="scelta" id="textgpu">Scegli una scheda video</div><b class="prezzo">0$</b>
+                </div>
+            </p>
+
+            <hr>
+
+            <p class="lista">
+
+                <div class="line">
+                    <div class="scelta" id="textgpu">Totale</div><b class="prezzo">0$</b>
+                </div>
+            </p>
+
+        </div>
+
 
     </div>
-    </div>
-
-
-
-
-
-
-
-    <div class="footer">
-
-    </div>
-    </div>
-
-
-
-
     </div>
 </body>

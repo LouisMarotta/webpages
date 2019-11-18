@@ -125,14 +125,18 @@ ul, a, button{
 }
 
 .pezzi img{
+    background-color: white;
+    transition: all 0.2s ease-in-out;
     float: right;
     height: 27vw;
     max-height: 225px;
     max-width: 225px;
+    object-fit: scale-down;
 
 }
 
 .pezzi img:hover{
+    transition: all 0.2s ease-in-out;
     opacity: 50%;
     cursor: pointer;
 
@@ -152,7 +156,61 @@ ul, a, button{
     font-size: 1.5em;
 }
 
-.riepilogo p{
+.wrapper{
+    background-color: #354C53;
+    padding: 24px;
+}
 
-    display: flex;
+.prezzo{
+    float:right;
+}
+
+#incomp {
+    width: 100%;
+    background-color: black;
+    color: red;
+    padding: 16px;
+}
+
+.riepilogo{
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    width: 87%;
+    
+}
+
+.lista{
+    vertical-align: middle;
+    height: 20px;
+}
+
+.line{
+    overflow: auto;
+    align-content: center;
+    width: 100%;
+    float: left;
+}
+
+.prezzo{
+    float: right;
+}
+
+.riepilogo p{
+    padding: 3px;
+    display: inline-block;
+    
+}
+
+.scelta{
+    float:left;
+    font-size: 1.5em;
+}
+
+.selezionato{
+    opacity: 50%;
+}
+
+.hidden{
+    display: none;
 }
