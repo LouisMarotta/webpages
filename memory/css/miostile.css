@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+*{
+    margin: 0%;
+    box-sizing: border-box;
+}
+.riga{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.carta{
+    width:200px;
+    height:325px;
+}
+
+.timer{
+    background-color: #00548b;
+    color: #ffffff;
+    width: 100px;
+    height: 50px;
+    font-size: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+    text-align: center;
+    vertical-align: auto;
+    font-family: 'Courier New', Courier, monospace;
+}

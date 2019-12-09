@@ -1,0 +1,96 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./css/miostile.css">
+</head>
+
+<body>
+    <div class="timer">
+        <p id="timer">0:0</p>
+    </div>
+
+    <div class="riga">
+        <img immagine="./img/cuori.jpg" onclick="flipcard(this)" src="./img/retro.jpg" alt="carta da gioco"
+            class="carta">
+        <img immagine="./img/fiori.jpg" onclick="flipcard(this)" src="./img/retro.jpg" alt="carta da gioco"
+            class="carta">
+    </div>
+    <div class="riga">
+        <img immagine="./img/fiori.jpg" onclick="flipcard(this)" src="./img/retro.jpg" alt="carta da gioco"
+            class="carta">
+        <img immagine="./img/cuori.jpg" onclick="flipcard(this)" src="./img/retro.jpg" alt="carta da gioco"
+            class="carta">
+    </div>
+    <div class="riga">
+        <img immagine="./img/picche.png" onclick="flipcard(this)" src="./img/retro.jpg" alt="carta da gioco"
+            class="carta">
+        <img immagine="./img/diamante.jpg" onclick="flipcard(this)" src="./img/retro.jpg" alt="carta da gioco"
+            class="carta">
+    </div>
+    <div class="riga">
+        <img immagine="./img/picche.png" onclick="flipcard(this)" src="./img/retro.jpg" alt="carta da gioco"
+            class="carta">
+        <img immagine="./img/diamante.jpg" onclick="flipcard(this)" src="./img/retro.jpg" alt="carta da gioco"
+            class="carta">
+    </div>
+    <script>
+        var sec = 0;
+        var min = 0;
+        var orologio = setInterval(function(){
+            sec++
+            document.getElementById("timer").innerHTML = min + ":" + sec
+            if (sec==59){
+                min++;
+                sec=-1;
+            }
+        }, 1000)
+
+
+        function flipcard(ele) {
+            var cartescoperte = document.getElementsByClassName('scoperta');
+
+            if (cartescoperte.length < 2 && !ele.classList.contains('trovata')) {
+                // console.log(ele.getAttribute('immagine'));
+                // console.log(ele.src);
+                ele.src = ele.getAttribute('immagine');
+                ele.classList.add('scoperta');
+                //console.log(ele);
+            }
+
+            controllaCarte();
+
+        }
+
+        function controllaCarte() {
+
+            //rileggo le carte scoperte
+            var scoperte = document.getElementsByClassName('scoperta');
+            console.log(scoperte);
+
+            if (scoperte.length == 2) {
+
+                if (scoperte[0].getAttribute('immagine') == scoperte[1].getAttribute('immagine')) {
+
+                    scoperte[1].classList.add('trovata');
+                    scoperte[0].classList.add('trovata');
+                    if (document.getElementsByClassName("trovata").length==8){
+                        clearInterval(orologio)
+                    }
+                }
+                else {
+                    alert("Ritenta");
+                    scoperte[0].src = "./img/retro.jpg";
+                    scoperte[1].src = "./img/retro.jpg";
+                }
+                scoperte[1].classList.remove('scoperta');
+                scoperte[0].classList.remove('scoperta');
+            }
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>
