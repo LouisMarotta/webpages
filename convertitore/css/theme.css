@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+
+body{
+background-color: rgb(9, 44, 78);
+font-family: 'Ubuntu', sans-serif;
+}
+
+h1, h2{
+    color: white;
+    text-align: center;
+    
+    margin: 21px;
+    
+}
+
+.conversione{
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 50px;
+    background-color: rgb(55, 103, 156);
+    padding: 30px;
+    color: white;
+    align-content: center;
+}
+
+.textbox{
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.textbox input{
+    width: 5vw;
+}
+
+.selection {
+    align-content: center;
+    
+}
+

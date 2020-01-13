@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="/css/theme.css">
+
+    <title>Conversione</title>
+</head>
+
+<body>
+    <h1>Conversione tra basi</h1>
+
+    <div class="conversione">
+        <h2>Conversione alla base decimale</h2>
+        <div class="textbox">
+            <input type="text" id="num1" name="num"></input>
+            <input type="text" id="risultato1" name="num" readonly></input>
+            <br>
+        </div>
+
+        <div class="selection">
+            <input type="radio" name="convDec" id="base" value="2" />
+            <label for="convDec">2</label>
+
+            <input type="radio" name="convDec" id="base" value="8" />
+            <label for="convDec">8</label>
+
+            <input type="radio" name="convDec" id="base" value="16" />
+            <label for="convDec">16</label>
+        </div>
+
+        <button onclick="traduciB10(document.getElementById('num1').value, document.getElementsByName('convDec'))">Converti</button>
+    </div>
+
+    <div class="conversione">
+        <h2>Conversione dalla base decimale</h2>
+        <div class="textbox">
+            <input type="text" id="num2" name="num"></input>
+            <input type="text" id="risultato2" name="num" readonly></input>
+            <br>
+        </div>
+
+        <div class="selection">
+            <input type="radio" name="convBase" id="base" value="2" />
+            <label for="convDec">2</label>
+
+            <input type="radio" name="convBase" id="base" value="8" />
+            <label for="convDec">8</label>
+
+            <input type="radio" name="convBase" id="base" value="16" />
+            <label for="convDec">16</label>
+        </div>
+
+        <button
+            onclick="convertDaB10(document.getElementById('num2').value, document.getElementsByName('convBase'))">Converti</button>
+    </div>
+
+
+
+
+    <script>
+        function traduciB10(num, base) {
+            var valBase;
+            var numB10 = 0;
+            var lett = ""
+
+            console.log("num " + num)
+
+            for (var i = 0; i < base.length; i++) {
+                if (base[i].checked) {
+                    valBase = base[i].value
+                }
+            }
+            console.log(valBase)
+
+
+            console.log(num.length)
+            for (var i = 0; i < num.length; i++) {
+                console.log(i)
+                if (valBase > 10) {
+                    //Numeri esadecimali
+
+                    switch (num[i].toLowerCase()) {
+                        case "a":
+                            lett = 10
+                            break;
+                        case "b":
+                            lett = 11
+                            break;
+                        case "c":
+                            lett = 12
+                            break;
+                        case "d":
+                            lett = 13
+                            break;
+                        case "e":
+                            lett = 14
+                            break;
+                        case "f":
+                            lett = 15
+                            break;
+                        default:
+                            lett = num[i]
+                            break;
+                    }
+                    var pot = num.length - 1 - i;
+                    numB10 += lett * Math.pow(valBase, pot);
+
+
+                } else {
+                    //Per i numeri di base minore a 10
+                    var pot = num.length - 1 - i;
+                    numB10 += num[i] * Math.pow(valBase, pot);
+
+                }
+
+                //console.log("\r\nNumB10 " + numB10);
+                //console.log("Numero " + num[i]);
+                //console.log("potenza " + i);
+                //console.log("base " + base);
+
+                console.log("NumB10 " + numB10);
+            }
+
+            document.getElementById("risultato1").value = numB10;
+        }
+
+        function convertDaB10(num, base) {
+            var numDaAltraBase = "";
+            var lettera = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"]
+            var valBase
+            console.log("num " + num)
+            for (var i = 0; i < base.length; i++) {
+                if (base[i].checked) {
+                    valBase = base[i].value
+                }
+            }
+            console.log("base " + valBase)
+
+            while (num > 0) {
+                var resto = num % valBase;
+                numDaAltraBase = lettera[resto] + numDaAltraBase;
+                var num = Math.floor(num / valBase);
+                
+            }
+            document.getElementById("risultato2").value = numDaAltraBase;
+            return numDaAltraBase;
+        }
+    </script>
+</body>
+
+</html>
